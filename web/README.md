@@ -39,3 +39,12 @@ all 98 records, topic and text filtering, source toggles, model presets, all 64
 relation/predicate pairs, and narrow-screen overflow. No runtime errors occurred.
 Optional browser-agent controls use feature detection. Native WebMCP was not
 available in the local test browser, so that integration was not runtime-validated.
+
+## Hosting
+
+GitHub Pages publishes this directory using `.github/workflows/pages.yml`.
+Changes to `web/` on `main` automatically publish a new version. The public URL is
+https://mohdriyaazpersonal.github.io/formal-mathematics-proof-verification-toolkit/.
+
+The site credits Mohd Riyaaz in the header and footer. Repository links are
+intentionally omitted from the visitor interface.

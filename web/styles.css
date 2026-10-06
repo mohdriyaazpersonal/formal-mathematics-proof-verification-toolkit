@@ -10,3 +10,10 @@
 .proof-description,.page-heading p,.lab-intro p,.conclusion p{font-size:1rem}.topic-button,.view-tab,.text-button,.search input,.item-title,.property strong,select{font-size:.875rem}.item-name,.code-toolbar>span,.code-actions button,.proof-note,.proof-bottom>span,.proof-bottom a,.property small,.property .pass,.property .fail{font-size:.75rem}pre{font-size:.8125rem}.metrics span{font-size:.75rem}.panel-heading>span{font-size:.75rem}.sidebar-bottom .external{font-size:.8125rem}
 
 .skip:not(:focus){clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+
+/* Author credit remains visible in the shared header on both workspace views. */
+.author-credit{margin-left:auto;display:flex;align-items:center;gap:8px;padding:9px 13px;background:var(--soft);border:1px solid #ded9fc;border-radius:7px;white-space:nowrap;font-size:.875rem}
+.author-credit>span{color:#79718e;font-size:.75rem}.author-credit strong{color:#5042bd;font-weight:650}
+.collection-credit{font-size:.8125rem;line-height:1.6;color:#aeb0c3}
+.footer-author strong{color:var(--accent);font-weight:600}
+@media(max-width:600px){.topbar{height:auto;flex-wrap:wrap;gap:0}.topbar nav{height:56px}.author-credit{order:-1;margin:14px 0 0;max-width:100%}.author-credit strong{font-size:.9375rem}footer{flex-direction:column;gap:8px}footer>.footer-author:last-child{display:block}}

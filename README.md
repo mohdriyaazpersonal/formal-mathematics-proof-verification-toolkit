@@ -13,7 +13,7 @@ There are no unfinished proof exercises in the build.
 
 ## Explore the website
 
-[Open the public proof workspace](https://formal-mathematics-toolkit.mohddriyaaz.chatgpt.site)
+[Open the public proof workspace](https://mohdriyaazpersonal.github.io/formal-mathematics-proof-verification-toolkit/)
 
 Browse and search all 98 theorems, read proof explanations and complete Lean modules,
 and explore a two-point relation in the interactive counterexample lab. The website
