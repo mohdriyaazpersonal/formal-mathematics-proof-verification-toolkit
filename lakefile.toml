@@ -1,0 +1,16 @@
+name = "formal-mathematics-proof-verification-toolkit"
+version = "1.0.0"
+defaultTargets = ["FormalToolkit"]
+
+[leanOptions]
+warningAsError = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.24.0"
+
+[[lean_lib]]
+name = "FormalToolkit"
+roots = ["FormalToolkit", "Toolkit"]
+globs = ["FormalToolkit", "Toolkit", "Logic.+", "Relations.+", "Functions.+", "Sets.+", "Induction.+", "Algebra.+", "NumberTheory.+", "DiscreteMath.+", "Counterexamples.+", "Tests.+"]

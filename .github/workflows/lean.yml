@@ -1,0 +1,27 @@
+name: Lean verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check coverage and reject placeholders
+        run: |
+          python3 scripts/check_project.py
+          python3 scripts/theorem_catalog.py --check
+      - uses: leanprover/lean-action@v1
+        with:
+          build: "true"
+          test: "false"
+          use-mathlib-cache: "true"
+      - name: Re-run trust audit explicitly
+        run: lake env lean Tests/AxiomAudit.lean
