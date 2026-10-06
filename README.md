@@ -11,6 +11,15 @@ The project combines informal proof ideas, explicit hypotheses, reusable Lean
 proofs, **ten documented counterexamples**, and an executable two-point model search.
 There are no unfinished proof exercises in the build.
 
+## Explore the website
+
+[Open the public proof workspace](https://formal-mathematics-toolkit.mohddriyaaz.chatgpt.site)
+
+Browse and search all 98 theorems, read proof explanations and complete Lean modules,
+and explore a two-point relation in the interactive counterexample lab. The website
+is a reader and finite-model demonstration; Lean verification runs in this repository.
+See [`web/README.md`](web/README.md) for local preview and data-refresh instructions.
+
 ## Getting started
 
 Install [elan](https://github.com/leanprover/elan#installation), Git, and Python 3.

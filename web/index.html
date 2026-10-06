@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formal Mathematics — Proof Library</title>
+<meta name="description" content="Explore 98 verified Lean 4 theorems, mathematical reasoning, and interactive counterexamples. A companion to the Formal Mathematics & Proof Verification Toolkit.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23574ce5'/%3E%3Cpath d='M9 7h15v4H13v5h9v4h-9v6H9Z' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar">
+<a class="brand" href="#library"><span class="brand-mark">∀</span><span>Formal<br><strong>Mathematics</strong></span></a>
+<div class="sidebar-label">THE TOOLKIT <span>01—09</span></div>
+<nav id="topics" aria-label="Mathematical topics"></nav>
+<div class="sidebar-bottom"><span class="version">LEAN 4.24.0 · MATHLIB</span><p>Mathematics, with<br>every step accounted for.</p><a class="external" href="https://github.com/mohdriyaazpersonal/formal-mathematics-proof-verification-toolkit" target="_blank" rel="noreferrer">View GitHub repository</a></div>
+</aside>
+<div class="workspace">
+<header class="topbar"><span class="breadcrumb">THE PROOF WORKSPACE</span><nav aria-label="Workspace"><button id="library-tab" class="view-tab active" aria-current="page">Proof library</button><button id="explorer-tab" class="view-tab">Counterexample lab</button></nav><a class="ci-link" href="https://github.com/mohdriyaazpersonal/formal-mathematics-proof-verification-toolkit/actions" target="_blank" rel="noreferrer"><span class="check-icon">✓</span> Verification history</a></header>
+<main id="main">
+<section id="library-view">
+<div class="page-heading"><div><div class="eyebrow">FORMAL MATHEMATICS & PROOF VERIFICATION</div><h1>The proof library<span>.</span></h1><p>From an assumption to a conclusion. Explore the reasoning in between.</p></div><div class="edition"><span>THE VERIFIED COLLECTION</span><strong>98 <i>theorems</i></strong></div></div>
+<div class="metrics"><div><strong>09</strong><span>Mathematical topics</span></div><div><strong>10</strong><span>Concrete counterexamples</span></div><div><strong>07</strong><span>Explicit induction proofs</span></div><div class="verification-note"><span class="check-icon">✓</span><span>Kernel-checked source<br><small>Lean proofs verified in CI</small></span></div></div>
+<div class="collection-toolbar"><div><h2 id="collection-title">All topics</h2><span id="result-count" class="count"></span></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a theorem or proof idea…" aria-label="Search theorems"><kbd>/</kbd></label></div>
+<div class="proof-layout"><section class="theorem-list" aria-label="Theorems"><div id="theorem-list"><p class="loading">Loading the verified collection…</p></div></section><article id="proof-detail" class="proof-detail" aria-live="polite"><p>Select a theorem to explore its proof.</p></article></div>
+<div class="library-footnote"><span>Statements and explanations are drawn directly from the Lean source.</span><span id="source-revision"></span></div>
+</section>
+<section id="explorer-view" hidden>
+<div class="page-heading"><div><div class="eyebrow">ASSUMPTIONS UNDER THE MICROSCOPE</div><h1>The counterexample lab<span>.</span></h1><p>Two points are enough to reveal what an assumption cannot tell you.</p></div><span class="lab-tag">FINITE MODEL · BOOL</span></div>
+<div class="lab-intro"><div><h2>Does forward imply backward?</h2><p>Suppose a relation is transitive and preserves a predicate along every forward edge. Must it preserve the predicate in reverse? Change the model to find out.</p></div><div class="math-statement">R a b &nbsp;∧&nbsp; P b &nbsp;<span>?</span>&nbsp; P a</div></div>
+<div class="lab-controls"><label>Choose a model <select id="preset"><option value="11,2">Transitive, but no backward transport</option><option value="15,3">Symmetric, with transport both ways</option><option value="6,2">Symmetric, but not transitive</option><option value="0,2">Empty relation</option><option value="custom" disabled>Custom model</option></select></label><button class="text-button" id="reset-model">Reset model</button></div>
+<div class="lab-grid"><section class="model-panel"><div class="panel-heading"><h3>Build the relation</h3><span>Click to toggle an edge</span></div><div class="model-body"><div class="relation-matrix"><span></span><span>a</span><span>b</span><span>a</span><button data-edge="0" aria-label="Toggle relation from a to a"></button><button data-edge="1" aria-label="Toggle relation from a to b"></button><span>b</span><button data-edge="2" aria-label="Toggle relation from b to a"></button><button data-edge="3" aria-label="Toggle relation from b to b"></button></div><svg class="graph" viewBox="0 0 320 180" role="img" aria-label="Directed relation on points a and b"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="currentColor"/></marker></defs><path data-path="1" d="M92 73 Q160 23 228 73"/><path data-path="2" d="M228 102 Q160 151 92 102"/><path data-path="0" d="M54 69 C4 6 127 6 87 66"/><path data-path="3" d="M232 67 C194 6 312 6 268 69"/><circle data-node="0" cx="70" cy="88" r="29"/><circle data-node="1" cx="250" cy="88" r="29"/><text x="70" y="95">a</text><text x="250" y="95">b</text><text class="node-label" x="70" y="144">false</text><text class="node-label" x="250" y="144">true</text></svg></div><div class="predicate-controls"><span>Where does P hold?</span><button data-predicate="0" aria-label="Toggle predicate at a">P(a)</button><button data-predicate="1" aria-label="Toggle predicate at b">P(b)</button></div></section><section class="checks-panel"><div class="panel-heading"><h3>Check the assumptions</h3><span>Every point. Every edge.</span></div><div id="model-checks"></div></section></div>
+<div id="model-conclusion" class="conclusion" aria-live="polite"></div><div class="lab-footer"><p>This browser demonstration exhaustively checks a two-point model. It does not run Lean. The corresponding counterexample and bounded-search certificates are independently proved in the repository.</p><button id="open-counterproof" class="text-button">Read the verified Lean counterexample</button></div>
+</section>
+</main><footer><span>Formal Mathematics & Proof Verification Toolkit</span><span>Built on proof, not probability.</span></footer>
+</div>
+</body></html>
